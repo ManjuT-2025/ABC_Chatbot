@@ -1,7 +1,6 @@
 
 import streamlit as st
 from google import genai
-import google.generativeai as genai
 from google.genai import types
 from PIL import Image
 import os
@@ -16,9 +15,9 @@ input_image = st.file_uploader("Choose an image file", type=['png', 'jpg', 'jpeg
 input_text = st.text_area('Please paste the text here', height = 100).lower()
 
 # google gemini api using streamlit secrets
-genai.configure(api_key=st.secrets.get("gemini_api_key"))
+client = genai.configure(api_key=st.secrets.get("gemini_api_key"))
 
-chat = genai.create(model="gemini-2.0-flash")
+chat = client.chats.create(model="gemini-2.0-flash")
 
 
 # Process inputs on button click (chatgpt)
