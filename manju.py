@@ -62,6 +62,3 @@ if st.button("Analyze"):
   except Exception as e:
       st.write(f"Error: {e}")
 
-
-for message in chat.get_history():
-      st.write(message.parts[0].text)
