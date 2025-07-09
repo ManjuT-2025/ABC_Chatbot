@@ -15,8 +15,7 @@ input_image = st.file_uploader("Choose an image file", type=['png', 'jpg', 'jpeg
 input_text = st.text_area('Please paste the text here', height = 100).lower()
 
 # google gemini api using streamlit secrets
-genai.configure(api_key=st.secrets["gemini_api_key"])
-
+genai.configure(api_key=st.secrets.get("gemini_api_key"))
 
 chat = client.chats.create(model="gemini-2.0-flash")
 
