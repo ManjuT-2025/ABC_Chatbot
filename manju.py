@@ -2,9 +2,7 @@
 import streamlit as st
 from google import genai
 from google.genai import types
-from google.genai import Client
 from google.genai import client
-
 from PIL import Image
 import os
 
