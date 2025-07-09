@@ -1,1 +1,3 @@
 # ABC_Chatbot
+
+**ABC chatbot** created by **Manju Thomas** helps user to analyze images and asks questions without conversational format using **google gemini API**. Initially created in **Google Collab** for its ease of use and connection with accessibilty of CPU, GPU processors makes faster to coding. Programming language used here is **Python**. GUI is streamlite. During testing in Google Collab, a process called tunneling via **local tunnel** used for testing in **streamlite**. After successfull testing, created a token in GitHub, pushed code into **GitHub**, then deployed in Streamlit Community Cloud. Users can access the app using this link https://abc-chatbot.streamlit.app/.
