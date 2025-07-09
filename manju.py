@@ -2,7 +2,6 @@
 import streamlit as st
 from google import genai
 import google.generativeai as genai
-from genai import client
 from google.genai import types
 from PIL import Image
 import os
