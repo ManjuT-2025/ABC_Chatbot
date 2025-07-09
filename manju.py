@@ -18,7 +18,7 @@ input_text = st.text_area('Please paste the text here', height = 100).lower()
 # google gemini api using streamlit secrets
 genai.configure(api_key=st.secrets.get("gemini_api_key"))
 
-chat = genai.chats.create(model="gemini-2.0-flash")
+chat = genai.create(model="gemini-2.0-flash")
 
 
 # Process inputs on button click (chatgpt)
