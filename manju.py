@@ -54,8 +54,8 @@ if st.button("Analyze"):
     else:
       if input_text != 'stop':
         response = chat.send_message_stream(input_text)
-        response_text = response.text
-        
+        for item in response:
+          print(item)
       else:
         print('Thank you for your conversation. Have a nice day!')
 
