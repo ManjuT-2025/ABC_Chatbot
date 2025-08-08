@@ -28,7 +28,7 @@ if st.button("Analyze"):
   try:
     response_text = ""
 
-    if input_image or input_text:
+    if input_image and input_text:
       try:
         image =  Image.open(input_image)
 
