@@ -55,8 +55,7 @@ if st.button("Analyze"):
       if input_text != 'stop':
         response = chat.send_message_stream(input_text)
         response_text = response.text
-        #response_text = "".join([part.text for part in response if hasattr(part, 'text')])
-        #st.markdown(response_text, unsafe_allow_html=True)
+        
       else:
         print('Thank you for your conversation. Have a nice day!')
 
