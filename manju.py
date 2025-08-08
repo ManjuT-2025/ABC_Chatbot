@@ -46,8 +46,6 @@ if st.button("Analyze"):
         else:
           response_text = response.text if hasattr(response, 'text') else ""
           st.markdown(response_text, unsafe_allow_html=True)
-        # Saving to chat history
-        chat.send_message(response_text)
       except Exception as e:
         st.error(f"Error processing image: {e}")
 
