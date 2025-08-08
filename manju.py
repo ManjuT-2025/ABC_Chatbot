@@ -57,6 +57,7 @@ if st.button("Analyze"):
           response_text = "".join([part.text for part in response if hasattr(part, 'text')])
         else:
           response_text = response.text if hasattr(response, 'text') else ""
+          response_text.remove('role - user', 'role - model')
           st.markdown(response_text, unsafe_allow_html=True)
       except Exception as e:
         st.error(f"Error processing image: {e}")
@@ -65,6 +66,7 @@ if st.button("Analyze"):
       if input_text != 'stop':
         response = chat.send_message_stream(input_text)
         response_text = "".join([part.text for part in response if hasattr(part, 'text')])
+        response_text.remove('role - user', 'role - model')
         st.markdown(response_text, unsafe_allow_html=True)
       else:
         print('Thank you for your conversation. Have a nice day!')
