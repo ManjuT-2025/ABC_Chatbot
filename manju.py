@@ -24,7 +24,14 @@ chat = client.chats.create(model="gemini-2.0-flash")
 
 # system instruction
 system_instruction = """
-You are a helpful chatbot. When the user asks questions, give exact answer/response. in response remove 'role', 'model' things.
+You are a helpful chatbot. When the user asks questions, give exact answer/response. in response remove these things.
+
+role - user
+
+
+role - model
+
+Donnot repeat response again and again in fragmented pieces.
 """
 
 
