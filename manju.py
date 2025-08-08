@@ -22,6 +22,11 @@ client = Client(api_key=api_from_streamlite)
 
 chat = client.chats.create(model="gemini-2.0-flash")
 
+# system instruction
+system_instruction = """
+You are a helpful chatbot. When the user asks questions, give exact answer/response. in response remove 'role', 'model' things.
+"""
+
 
 # Process inputs on button click (chatgpt)
 if st.button("Analyze"):
