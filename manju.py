@@ -34,7 +34,7 @@ if st.button("Analyze"):
         image =  Image.open(input_image)
 
         # response from chatbot
-        response = client.models.generate_content_stream(
+        response = client.models.generate_content(
         model="gemini-2.5-flash", contents=[image, input_text],
         config=types.GenerateContentConfig(
             temperature=0.1
