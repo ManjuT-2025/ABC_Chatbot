@@ -1,0 +1,22 @@
+name: Keep Streamlit App Awake
+
+on:
+  schedule:
+    - cron: "0 0,12 * * *"  # Runs every 12 hours (12 AM and 12 PM UTC)
+
+jobs:
+  keep-awake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"  # Compatible with Selenium
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium webdriver-manager
+      - name: Run keep-awake script
+        run: python keep_streamlit_awake.py  # Update to scripts/keep_streamlit_awake.py if in a subfolder
