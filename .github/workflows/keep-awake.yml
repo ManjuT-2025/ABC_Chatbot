@@ -19,4 +19,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium webdriver-manager
       - name: Run keep-awake script
-        run: python keep_streamlit_awake.py  # Update to scripts/keep_streamlit_awake.py if in a subfolder
+        run: python streamlit_awake.py  # Update to scripts/keep_streamlit_awake.py if in a subfolder
