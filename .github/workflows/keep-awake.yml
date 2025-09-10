@@ -3,6 +3,7 @@ name: Keep Streamlit App Awake
 on:
   schedule:
     - cron: "0 0,12 * * *"  # Runs every 12 hours (12 AM and 12 PM UTC)
+  workflow_dispatch:
 
 jobs:
   keep-awake:
@@ -19,4 +20,4 @@ jobs:
           python -m pip install --upgrade pip
           pip install selenium webdriver-manager
       - name: Run keep-awake script
-        run: python streamlit_awake.py  # Update to scripts/keep_streamlit_awake.py if in a subfolder
+        run: python streamlit_awake.py
